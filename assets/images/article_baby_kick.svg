@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="kickBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#be123c"/>
+    </linearGradient>
+    <filter id="softFloat" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#881337" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#kickBg)"/>
+  
+  <!-- Soft floating bubbles -->
+  <circle cx="150" cy="120" r="40" fill="#ffffff" opacity="0.1"/>
+  <circle cx="680" cy="320" r="70" fill="#ffffff" opacity="0.08"/>
+  <circle cx="620" cy="100" r="30" fill="#ffffff" opacity="0.12"/>
+  <circle cx="220" cy="360" r="50" fill="#ffffff" opacity="0.09"/>
+
+  <!-- Center Card: Baby Kick Counter UI -->
+  <g transform="translate(240, 60)" filter="url(#softFloat)">
+    <rect width="320" height="330" rx="24" fill="#ffffff"/>
+    
+    <!-- Top banner -->
+    <rect width="320" height="70" rx="24" fill="#fff1f2"/>
+    <text x="160" y="42" font-family="-apple-system, sans-serif" font-size="16" font-weight="700" fill="#e11d48" text-anchor="middle">Baby Kick Counter</text>
+    
+    <!-- Kick Footprint Icon -->
+    <g transform="translate(160, 140)">
+      <ellipse cx="0" cy="0" rx="22" ry="32" fill="#f43f5e"/>
+      <circle cx="-16" cy="-38" r="6" fill="#f43f5e"/>
+      <circle cx="-4" cy="-44" r="6.5" fill="#f43f5e"/>
+      <circle cx="8" cy="-42" r="6" fill="#f43f5e"/>
+      <circle cx="18" cy="-36" r="5" fill="#f43f5e"/>
+      <circle cx="26" cy="-28" r="4.2" fill="#f43f5e"/>
+    </g>
+
+    <!-- Stats count -->
+    <text x="160" y="235" font-family="-apple-system, sans-serif" font-size="36" font-weight="800" fill="#1e293b" text-anchor="middle">10 Kicks</text>
+    <text x="160" y="260" font-family="-apple-system, sans-serif" font-size="13" font-weight="500" fill="#059669" text-anchor="middle">Recorded in 28 mins • Healthy</text>
+
+    <!-- Tap button -->
+    <rect x="50" y="280" width="220" height="36" rx="18" fill="#f43f5e"/>
+    <text x="160" y="303" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#ffffff" text-anchor="middle">+ Record Movement</text>
+  </g>
+</svg>

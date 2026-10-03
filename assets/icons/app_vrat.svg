@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+  <defs>
+    <linearGradient id="vratOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#ea580c"/>
+    </linearGradient>
+  </defs>
+  <rect width="80" height="80" rx="20" fill="url(#vratOrange)"/>
+  <!-- Diya flame -->
+  <path d="M 40 18 C 48 30 46 38 40 43 C 34 38 32 30 40 18 Z" fill="#fef08a"/>
+  <circle cx="40" cy="33" r="4.5" fill="#ffffff" opacity="0.8"/>
+  <!-- Diya base / lamp body -->
+  <path d="M 22 45 C 22 57 32 62 40 62 C 48 62 58 57 58 45 C 48 48 32 48 22 45 Z" fill="#ffffff"/>
+  <!-- Lamp stand -->
+  <rect x="36" y="60" width="8" height="4" fill="#ffffff" rx="1"/>
+  <path d="M 32 64 H 48" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

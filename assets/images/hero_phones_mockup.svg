@@ -1,0 +1,274 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 680" width="700" height="680">
+  <defs>
+    <!-- Background Glows -->
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="50" result="blur"/>
+    </filter>
+    
+    <filter id="dropShadowFront" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="8" dy="24" stdDeviation="22" flood-color="#0f172a" flood-opacity="0.32"/>
+    </filter>
+
+    <filter id="dropShadowBack" x="-20%" y="-20%" width="150%" height="150%">
+      <feDropShadow dx="12" dy="28" stdDeviation="24" flood-color="#0f172a" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Gradients -->
+    <linearGradient id="phoneBorderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#334155"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+
+    <linearGradient id="backPhoneHeader" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1d4ed8"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+
+    <linearGradient id="pregIconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+
+    <linearGradient id="dropSizeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <linearGradient id="vratGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c"/>
+      <stop offset="100%" stop-color="#f97316"/>
+    </linearGradient>
+
+    <linearGradient id="alumniGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d9488"/>
+      <stop offset="100%" stop-color="#14b8a6"/>
+    </linearGradient>
+
+    <linearGradient id="soundGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <!-- Clip Paths for rounded screens -->
+    <clipPath id="frontScreenClip">
+      <rect x="0" y="0" width="280" height="555" rx="36"/>
+    </clipPath>
+    <clipPath id="backScreenClip">
+      <rect x="0" y="0" width="265" height="530" rx="34"/>
+    </clipPath>
+  </defs>
+
+  <!-- Ambient Color Glows behind phones -->
+  <circle cx="280" cy="280" r="170" fill="#fbcfe8" opacity="0.45" filter="url(#softGlow)"/>
+  <circle cx="480" cy="310" r="190" fill="#bfdbfe" opacity="0.55" filter="url(#softGlow)"/>
+  <circle cx="360" cy="460" r="160" fill="#fed7aa" opacity="0.35" filter="url(#softGlow)"/>
+
+  <!-- ================= BACK PHONE ================= -->
+  <g transform="translate(355, 65) rotate(9)" filter="url(#dropShadowBack)">
+    <!-- Chassis -->
+    <rect x="-6" y="-6" width="277" height="542" rx="40" fill="url(#phoneBorderGrad)" stroke="#475569" stroke-width="2.5"/>
+    <rect x="0" y="0" width="265" height="530" rx="34" fill="#f8fafc"/>
+
+    <g clip-path="url(#backScreenClip)">
+      <!-- Status bar -->
+      <rect x="0" y="0" width="265" height="28" fill="#1e40af"/>
+      <text x="24" y="19" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#ffffff">9:41</text>
+      <!-- Battery & Wifi -->
+      <rect x="220" y="10" width="18" height="9" rx="2.5" fill="none" stroke="#fff" stroke-width="1.2"/>
+      <rect x="222" y="12" width="12" height="5" rx="1" fill="#fff"/>
+      <path d="M 239 12.5 L 240 12.5 L 240 16.5 L 239 16.5" fill="#fff"/>
+
+      <!-- App Header Banner -->
+      <rect x="0" y="28" width="265" height="110" fill="url(#backPhoneHeader)"/>
+      <text x="20" y="68" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" fill="#ffffff">Tools &amp; Apps</text>
+      <text x="20" y="88" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" fill="#dbeafe">for a Better</text>
+      <text x="20" y="108" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Everyday Life</text>
+
+      <!-- Apps Grid Inside Back Phone -->
+      <!-- App 1: Pregnancy -->
+      <g transform="translate(24, 155)">
+        <rect width="60" height="60" rx="16" fill="url(#pregIconGrad)"/>
+        <circle cx="30" cy="24" r="8" fill="#fff" opacity="0.9"/>
+        <path d="M18 48 C 18 36, 42 36, 42 48 Z" fill="#fff" opacity="0.9"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Pregnancy</text>
+      </g>
+
+      <!-- App 2: DropSize -->
+      <g transform="translate(104, 155)">
+        <rect width="60" height="60" rx="16" fill="url(#dropSizeGrad)"/>
+        <rect x="15" y="17" width="30" height="24" rx="4" fill="none" stroke="#fff" stroke-width="2.5"/>
+        <circle cx="23" cy="24" r="3" fill="#fff"/>
+        <path d="M17 37 L27 27 L33 33 L37 29 L43 37 Z" fill="#fff"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">DropSize</text>
+      </g>
+
+      <!-- App 3: Vrat Sathi -->
+      <g transform="translate(184, 155)">
+        <rect width="60" height="60" rx="16" fill="url(#vratGrad)"/>
+        <path d="M30 16 Q36 26 30 32 Q24 26 30 16 Z" fill="#fef08a"/>
+        <path d="M18 34 Q30 46 42 34 Z" fill="#fff"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Vrat Sathi</text>
+      </g>
+
+      <!-- App 4: Alumni -->
+      <g transform="translate(24, 250)">
+        <rect width="60" height="60" rx="16" fill="url(#alumniGrad)"/>
+        <path d="M16 26 L30 18 L44 26 Z" fill="#fff"/>
+        <rect x="20" y="28" width="4" height="14" fill="#fff"/>
+        <rect x="28" y="28" width="4" height="14" fill="#fff"/>
+        <rect x="36" y="28" width="4" height="14" fill="#fff"/>
+        <rect x="16" y="42" width="28" height="4" fill="#fff"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Alumni</text>
+      </g>
+
+      <!-- App 5: Phone Sound -->
+      <g transform="translate(104, 250)">
+        <rect width="60" height="60" rx="16" fill="url(#soundGrad)"/>
+        <path d="M22 22 Q20 30 26 38 L30 34 Q26 28 28 26 Z" fill="#fff"/>
+        <path d="M33 22 A 6 6 0 0 1 33 32" stroke="#fff" stroke-width="2" fill="none"/>
+        <path d="M37 18 A 12 12 0 0 1 37 36" stroke="#fff" stroke-width="2" fill="none"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Phone Sound</text>
+      </g>
+
+      <!-- App 6: Health / Daily -->
+      <g transform="translate(184, 250)">
+        <rect width="60" height="60" rx="16" fill="#10b981"/>
+        <path d="M22 29 H38 M30 21 V37" stroke="#fff" stroke-width="3.5" stroke-linecap="round"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Guides</text>
+      </g>
+
+      <!-- App 7: Notes / Age Calc -->
+      <g transform="translate(24, 345)">
+        <rect width="60" height="60" rx="16" fill="#f59e0b"/>
+        <rect x="18" y="18" width="24" height="26" rx="3" fill="none" stroke="#fff" stroke-width="2.5"/>
+        <line x1="23" y1="24" x2="37" y2="24" stroke="#fff" stroke-width="2"/>
+        <line x1="23" y1="30" x2="33" y2="30" stroke="#fff" stroke-width="2"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Age Calc</text>
+      </g>
+
+      <!-- App 8: Settings -->
+      <g transform="translate(104, 345)">
+        <rect width="60" height="60" rx="16" fill="#64748b"/>
+        <circle cx="30" cy="30" r="10" stroke="#fff" stroke-width="3" fill="none"/>
+        <circle cx="30" cy="30" r="4" fill="#fff"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Tools</text>
+      </g>
+
+      <!-- App 9: Updates -->
+      <g transform="translate(184, 345)">
+        <rect width="60" height="60" rx="16" fill="#06b6d4"/>
+        <path d="M22 30 A 8 8 0 1 1 35 34" stroke="#fff" stroke-width="2.5" fill="none"/>
+        <polygon points="36,30 38,37 31,36" fill="#fff"/>
+        <text x="30" y="74" font-family="-apple-system, sans-serif" font-size="9" font-weight="600" fill="#475569" text-anchor="middle">Updates</text>
+      </g>
+    </g>
+
+    <!-- Glass Reflection on Back Phone -->
+    <path d="M 0,0 L 265,0 L 265,180 L 0,350 Z" fill="#ffffff" opacity="0.07" clip-path="url(#backScreenClip)"/>
+  </g>
+
+  <!-- ================= FOREGROUND PHONE (Pregnancy Calculator) ================= -->
+  <g transform="translate(185, 40) rotate(-4)" filter="url(#dropShadowFront)">
+    <!-- Chassis -->
+    <rect x="-7" y="-7" width="294" height="569" rx="44" fill="url(#phoneBorderGrad)" stroke="#64748b" stroke-width="2.5"/>
+    <rect x="0" y="0" width="280" height="555" rx="38" fill="#ffffff"/>
+
+    <g clip-path="url(#frontScreenClip)">
+      <!-- Dynamic Island / Speaker notch -->
+      <rect x="95" y="11" width="90" height="22" rx="11" fill="#090d16"/>
+      <circle cx="165" cy="22" r="4" fill="#1e293b"/>
+
+      <!-- App Top Bar Background -->
+      <rect x="0" y="0" width="280" height="195" fill="#fff1f2"/>
+
+      <!-- Status Bar Elements -->
+      <text x="24" y="26" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" fill="#0f172a">9:41</text>
+      <rect x="236" y="17" width="18" height="9" rx="2.5" fill="none" stroke="#0f172a" stroke-width="1.2"/>
+      <rect x="238" y="19" width="11" height="5" rx="1" fill="#0f172a"/>
+
+      <!-- Mother Illustration in Pink Circle -->
+      <g transform="translate(140, 92)">
+        <circle cx="0" cy="0" r="34" fill="#ffe4e6"/>
+        <!-- Silhouette of mother -->
+        <circle cx="0" cy="-12" r="10" fill="#e11d48"/>
+        <!-- Hair flow -->
+        <path d="M -9 -14 Q -15 2 -7 10 Q -2 4 -2 -14 Z" fill="#be123c"/>
+        <!-- Torso / Maternity dress -->
+        <path d="M -14 18 C -14 0, 14 0, 14 18 C 10 26, -10 26, -14 18 Z" fill="#f43f5e"/>
+        <!-- Subtle baby bump curve -->
+        <path d="M 5 6 Q 16 12 10 21" stroke="#fda4af" stroke-width="2" fill="none" stroke-linecap="round"/>
+      </g>
+
+      <!-- App Title -->
+      <text x="140" y="152" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="700" fill="#1e293b" text-anchor="middle">Pregnancy</text>
+      <text x="140" y="171" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="17" font-weight="700" fill="#1e293b" text-anchor="middle">Calculater</text>
+
+      <!-- Menu Option Cards -->
+      <!-- Card 1: Due Date -->
+      <g transform="translate(18, 195)">
+        <rect width="244" height="66" rx="16" fill="#ffffff" stroke="#f1f5f9" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.03))"/>
+        <!-- Icon -->
+        <rect x="12" y="13" width="40" height="40" rx="12" fill="#fff1f2"/>
+        <path d="M22 25 H42 M22 29 H42 M24 21 V24 M40 21 V24" stroke="#e11d48" stroke-width="2" stroke-linecap="round"/>
+        <rect x="22" y="24" width="20" height="18" rx="2" fill="none" stroke="#e11d48" stroke-width="1.8"/>
+        <!-- Texts -->
+        <text x="64" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1e293b">Due Date</text>
+        <text x="64" y="47" font-family="-apple-system, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Calculate your expected date</text>
+        <!-- Arrow -->
+        <path d="M222 33 L227 37 L222 41" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Card 2: Week by Week -->
+      <g transform="translate(18, 271)">
+        <rect width="244" height="66" rx="16" fill="#ffffff" stroke="#f1f5f9" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.03))"/>
+        <!-- Icon -->
+        <rect x="12" y="13" width="40" height="40" rx="12" fill="#eff6ff"/>
+        <circle cx="32" cy="30" r="10" stroke="#2563eb" stroke-width="2" fill="none"/>
+        <circle cx="32" cy="27" r="3" fill="#2563eb"/>
+        <path d="M26 36 C 26 31, 38 31, 38 36" stroke="#2563eb" stroke-width="2" fill="none"/>
+        <!-- Texts -->
+        <text x="64" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1e293b">Week by Week</text>
+        <text x="64" y="47" font-family="-apple-system, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Track development stages</text>
+        <!-- Arrow -->
+        <path d="M222 33 L227 37 L222 41" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Card 3: Baby Growth -->
+      <g transform="translate(18, 347)">
+        <rect width="244" height="66" rx="16" fill="#ffffff" stroke="#f1f5f9" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.03))"/>
+        <!-- Icon -->
+        <rect x="12" y="13" width="40" height="40" rx="12" fill="#ecfdf5"/>
+        <path d="M24 41 L24 24 L39 41" stroke="#059669" stroke-width="2" stroke-linecap="round" fill="none"/>
+        <path d="M28 22 L40 34" stroke="#059669" stroke-width="2" stroke-linecap="round"/>
+        <!-- Texts -->
+        <text x="64" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1e293b">Baby Growth</text>
+        <text x="64" y="47" font-family="-apple-system, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Size comparison and tips</text>
+        <!-- Arrow -->
+        <path d="M222 33 L227 37 L222 41" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Card 4: Kick Counter -->
+      <g transform="translate(18, 423)">
+        <rect width="244" height="66" rx="16" fill="#ffffff" stroke="#f1f5f9" stroke-width="1.5" filter="drop-shadow(0 2px 4px rgba(0,0,0,0.03))"/>
+        <!-- Icon -->
+        <rect x="12" y="13" width="40" height="40" rx="12" fill="#fff7ed"/>
+        <ellipse cx="32" cy="33" rx="7" ry="10" fill="#ea580c"/>
+        <circle cx="28" cy="20" r="2" fill="#ea580c"/>
+        <circle cx="32" cy="18" r="2.2" fill="#ea580c"/>
+        <circle cx="36" cy="19" r="2" fill="#ea580c"/>
+        <!-- Texts -->
+        <text x="64" y="32" font-family="-apple-system, sans-serif" font-size="13" font-weight="700" fill="#1e293b">Kick Counter</text>
+        <text x="64" y="47" font-family="-apple-system, sans-serif" font-size="10" font-weight="500" fill="#94a3b8">Log baby activity &amp; time</text>
+        <!-- Arrow -->
+        <path d="M222 33 L227 37 L222 41" stroke="#cbd5e1" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+
+      <!-- Home Indicator bar at bottom -->
+      <rect x="90" y="538" width="100" height="4" rx="2" fill="#cbd5e1"/>
+    </g>
+
+    <!-- Glass Reflection Highlight on Front Phone -->
+    <path d="M 0,0 L 280,0 L 280,240 L 0,420 Z" fill="#ffffff" opacity="0.08" clip-path="url(#frontScreenClip)"/>
+  </g>
+</svg>

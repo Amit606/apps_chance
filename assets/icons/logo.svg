@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 40" width="180" height="40">
+  <defs>
+    <linearGradient id="logoBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <!-- Logo Icon Square -->
+  <rect x="0" y="2" width="36" height="36" rx="9" fill="url(#logoBlue)"/>
+  <!-- Bold A inside -->
+  <path d="M 18 10 L 11 28 H 15.5 L 17 24 H 22.5 L 23.5 28 H 28 Z M 18 15 L 21.2 21 H 18.2 Z" fill="#ffffff"/>
+  <!-- Brand text -->
+  <text x="46" y="27" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="800" fill="#0f172a" letter-spacing="-0.5">Apps<tspan font-weight="700" fill="#1e293b">Chance</tspan></text>
+</svg>

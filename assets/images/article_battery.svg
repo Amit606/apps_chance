@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+  <defs>
+    <linearGradient id="battBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#064e3b"/>
+    </linearGradient>
+    <filter id="battGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="10" stdDeviation="15" flood-color="#022c22" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#battBg)"/>
+  
+  <!-- Central Big Battery Graphic -->
+  <g transform="translate(240, 110)" filter="url(#battGlow)">
+    <!-- Battery Outer Shell -->
+    <rect x="0" y="0" width="300" height="150" rx="28" fill="#ffffff" opacity="0.15" stroke="#ffffff" stroke-width="4"/>
+    <!-- Battery Terminal Cap -->
+    <rect x="306" y="45" width="16" height="60" rx="8" fill="#ffffff"/>
+
+    <!-- Green Full Charge Bars -->
+    <rect x="18" y="18" width="55" height="114" rx="14" fill="#34d399"/>
+    <rect x="85" y="18" width="55" height="114" rx="14" fill="#34d399"/>
+    <rect x="152" y="18" width="55" height="114" rx="14" fill="#34d399"/>
+    <rect x="219" y="18" width="55" height="114" rx="14" fill="#34d399"/>
+
+    <!-- Lightning Bolt in Center -->
+    <polygon points="160,35 130,85 155,85 140,125 180,75 155,75" fill="#fef08a"/>
+  </g>
+
+  <!-- Metrics / Badges -->
+  <g transform="translate(240, 290)">
+    <rect width="320" height="60" rx="16" fill="#ffffff"/>
+    <text x="30" y="37" font-family="-apple-system, sans-serif" font-size="18" font-weight="800" fill="#065f46">+6.5 Hours</text>
+    <text x="145" y="37" font-family="-apple-system, sans-serif" font-size="14" font-weight="600" fill="#475569">Screen-on-Time Optimized</text>
+  </g>
+</svg>

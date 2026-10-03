@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AppsChance - Discover Useful Apps & Practical Guides</title>
+  <meta name="description" content="Explore our Android apps, helpful tools, and easy-to-understand guides for everyday life. Simple, useful and made for everyone.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP VIEW MODE SWITCHER BAR
+       Enables live testing of Desktop View, Mobile View, Side-by-Side, & Responsive
+       ========================================================================== -->
+  <header class="view-mode-bar" id="viewModeBar">
+    <div class="view-mode-brand">
+      <span class="view-mode-badge">Preview Mode</span>
+      <span>AppsChance Presentation</span>
+    </div>
+    <div class="view-mode-buttons">
+      <button type="button" class="view-mode-btn active" id="btnViewLive" title="Fluid Responsive Layout">
+        <span>⚡ Responsive Live</span>
+      </button>
+      <button type="button" class="view-mode-btn" id="btnViewDesktop" title="Preview Desktop View">
+        <span>🖥️ Desktop View</span>
+      </button>
+      <button type="button" class="view-mode-btn" id="btnViewMobile" title="Preview Mobile View in Phone Frame">
+        <span>📱 Mobile View</span>
+      </button>
+      <button type="button" class="view-mode-btn" id="btnViewSplit" title="Side-by-Side Comparison (as in screenshot)">
+        <span>🔀 Side-by-Side</span>
+      </button>
+    </div>
+    <button type="button" class="view-mode-close" id="btnCloseViewBar" title="Hide this toolbar">
+      <span>✕ Dismiss</span>
+    </button>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN WEB APPLICATION (Natively Responsive)
+       ========================================================================== -->
+  <div class="app-view-container" id="mainAppContainer">
+
+    <!-- SITE HEADER / NAVBAR -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a href="#home" class="brand-logo" aria-label="AppsChance Home">
+          <img src="assets/icons/logo.svg" alt="AppsChance Logo" width="160" height="38">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="nav-menu-wrapper" aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+            <li class="nav-item"><a href="#apps" class="nav-link">Apps</a></li>
+            <li class="nav-item"><a href="articles.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="#categories" class="nav-link">Categories</a></li>
+            <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Actions: Search & Mobile Menu Button -->
+        <div class="nav-actions">
+          <button type="button" class="btn-search" aria-label="Search articles and apps" title="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          
+          <button type="button" class="btn-mobile-toggle" aria-label="Open mobile navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="mainContent">
+
+      <!-- 1. HERO SECTION -->
+      <section class="hero-section" id="home">
+        <div class="container hero-grid">
+          
+          <!-- Left Hero Content -->
+          <div class="hero-content">
+            <h1 class="hero-title">Discover Useful Apps &amp; Practical Guides</h1>
+            <p class="hero-description">
+              Explore our Android apps, helpful tools, and easy-to-understand guides for everyday life. Simple, useful and made for everyone.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#apps" class="btn-primary">
+                <span>Explore Apps</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#blog" class="btn-secondary">
+                <span>Read Articles</span>
+              </a>
+            </div>
+
+            <!-- Feature Badges -->
+            <div class="hero-badges-row">
+              <!-- Badge 1: Safe & Secure -->
+              <div class="hero-badge-card badge-safe">
+                <div class="badge-icon-box">
+                  <img src="assets/icons/badge_safe.svg" alt="Safe & Secure" width="40" height="40">
+                </div>
+                <h3 class="badge-title">Safe &amp; Secure</h3>
+                <p class="badge-desc">Your privacy matters</p>
+              </div>
+
+              <!-- Badge 2: Lightweight Apps -->
+              <div class="hero-badge-card badge-light">
+                <div class="badge-icon-box">
+                  <img src="assets/icons/badge_lightweight.svg" alt="Lightweight Apps" width="40" height="40">
+                </div>
+                <h3 class="badge-title">Lightweight Apps</h3>
+                <p class="badge-desc">Fast and easy to use</p>
+              </div>
+
+              <!-- Badge 3: Regular Updates -->
+              <div class="hero-badge-card badge-updates">
+                <div class="badge-icon-box">
+                  <img src="assets/icons/badge_updates.svg" alt="Regular Updates" width="40" height="40">
+                </div>
+                <h3 class="badge-title">Regular Updates</h3>
+                <p class="badge-desc">Always improving</p>
+              </div>
+
+              <!-- Badge 4: Helpful Content -->
+              <div class="hero-badge-card badge-content">
+                <div class="badge-icon-box">
+                  <img src="assets/icons/badge_helpful.svg" alt="Helpful Content" width="40" height="40">
+                </div>
+                <h3 class="badge-title">Helpful Content</h3>
+                <p class="badge-desc">Guides for everyday life</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Hero Mockups (Pregnancy Calculator & Tools Apps Phones) -->
+          <div class="hero-mockup-wrapper">
+            <img src="assets/images/hero_phones_mockup.svg" alt="AppsChance Android Apps Showcase" class="hero-mockup-img" width="560" height="540">
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 2. OUR ANDROID APPS SECTION -->
+      <section class="apps-section" id="apps">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Our Android Apps</h2>
+              <p class="section-subtitle">Useful and easy-to-use apps built for everyday needs.</p>
+            </div>
+            <a href="#apps" class="section-view-all">
+              <span>View All Apps</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="apps-grid">
+            <!-- App 1: Pregnancy Calculator -->
+            <div class="app-card">
+              <div class="app-icon-wrap">
+                <img src="assets/icons/app_pregnancy.svg" alt="Pregnancy Calculator" width="64" height="64">
+              </div>
+              <div class="app-card-details">
+                <h3 class="app-card-title">Pregnancy Calculator</h3>
+                <p class="app-card-desc">Track your pregnancy dates, baby growth and more.</p>
+              </div>
+              <a href="#learn-pregnancy" class="btn-learn-more">
+                <span>Learn More</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+              <div class="app-mobile-arrow" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- App 2: DropSize -->
+            <div class="app-card">
+              <div class="app-icon-wrap">
+                <img src="assets/icons/app_dropsize.svg" alt="DropSize" width="64" height="64">
+              </div>
+              <div class="app-card-details">
+                <h3 class="app-card-title">DropSize</h3>
+                <p class="app-card-desc">Resize and compress images easily.</p>
+              </div>
+              <a href="#learn-dropsize" class="btn-learn-more">
+                <span>Learn More</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+              <div class="app-mobile-arrow" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- App 3: Vrat Sathi -->
+            <div class="app-card">
+              <div class="app-icon-wrap">
+                <img src="assets/icons/app_vrat.svg" alt="Vrat Sathi" width="64" height="64">
+              </div>
+              <div class="app-card-details">
+                <h3 class="app-card-title">Vrat Sathi</h3>
+                <p class="app-card-desc">Your guide for fasting dates, rules and reminders.</p>
+              </div>
+              <a href="#learn-vrat" class="btn-learn-more">
+                <span>Learn More</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+              <div class="app-mobile-arrow" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- App 4: Harcourtian Alumni Connect -->
+            <div class="app-card">
+              <div class="app-icon-wrap">
+                <img src="assets/icons/app_alumni.svg" alt="Harcourtian Alumni Connect" width="64" height="64">
+              </div>
+              <div class="app-card-details">
+                <h3 class="app-card-title">Harcourtian Alumni Connect</h3>
+                <p class="app-card-desc">Connect with alumni and stay updated.</p>
+              </div>
+              <a href="#learn-alumni" class="btn-learn-more">
+                <span>Learn More</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+              <div class="app-mobile-arrow" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <!-- App 5: Find Phone by Sounds -->
+            <div class="app-card">
+              <div class="app-icon-wrap">
+                <img src="assets/icons/app_phone_sound.svg" alt="Find Phone by Sounds" width="64" height="64">
+              </div>
+              <div class="app-card-details">
+                <h3 class="app-card-title">Find Phone by Sounds</h3>
+                <p class="app-card-desc">Find your phone with clap or sound.</p>
+              </div>
+              <a href="#learn-phone" class="btn-learn-more">
+                <span>Learn More</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </a>
+              <div class="app-mobile-arrow" style="display:none;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. BROWSE BY CATEGORY SECTION -->
+      <section class="categories-section" id="categories">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Browse by Category</h2>
+              <p class="section-subtitle">Find articles and apps based on your interests.</p>
+            </div>
+          </div>
+
+          <div class="categories-list">
+            <!-- Category 1: Pregnancy -->
+            <div class="category-card cat-pregnancy">
+              <div class="cat-icon-wrap">
+                <img src="assets/icons/cat_pregnancy.svg" alt="Pregnancy Category" width="38" height="38">
+              </div>
+              <h3 class="cat-title">Pregnancy</h3>
+              <p class="cat-subtitle">Guides and tips</p>
+            </div>
+
+            <!-- Category 2: Utilities -->
+            <div class="category-card cat-utilities">
+              <div class="cat-icon-wrap">
+                <img src="assets/icons/cat_utilities.svg" alt="Utilities Category" width="38" height="38">
+              </div>
+              <h3 class="cat-title">Utilities</h3>
+              <p class="cat-subtitle">Helpful tools</p>
+            </div>
+
+            <!-- Category 3: Android -->
+            <div class="category-card cat-android">
+              <div class="cat-icon-wrap">
+                <img src="assets/icons/cat_android.svg" alt="Android Category" width="38" height="38">
+              </div>
+              <h3 class="cat-title">Android</h3>
+              <p class="cat-subtitle">App tutorials</p>
+            </div>
+
+            <!-- Category 4: Education -->
+            <div class="category-card cat-education">
+              <div class="cat-icon-wrap">
+                <img src="assets/icons/cat_education.svg" alt="Education Category" width="38" height="38">
+              </div>
+              <h3 class="cat-title">Education</h3>
+              <p class="cat-subtitle">Learning resources</p>
+            </div>
+
+            <!-- Category 5: Lifestyle -->
+            <div class="category-card cat-lifestyle">
+              <div class="cat-icon-wrap">
+                <img src="assets/icons/cat_lifestyle.svg" alt="Lifestyle Category" width="38" height="38">
+              </div>
+              <h3 class="cat-title">Lifestyle</h3>
+              <p class="cat-subtitle">Everyday life tips</p>
+            </div>
+
+            <!-- Mobile Category "View All" Button (Only displays on mobile grid) -->
+            <div class="category-card cat-view-all" style="display:none;">
+              <div class="cat-icon-wrap">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#1e75ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </div>
+              <h3 class="cat-title">View All</h3>
+            </div>
+
+            <!-- Desktop Arrow Next Button -->
+            <button type="button" class="cat-scroll-next" aria-label="Next categories">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. LATEST ARTICLES SECTION -->
+      <section class="articles-section" id="blog">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2 class="section-title">Latest Articles</h2>
+              <p class="section-subtitle">Practical guides, tips and tutorials to help you make the most of our apps and tools.</p>
+            </div>
+            <a href="articles.html" class="section-view-all">
+              <span>View All Articles</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
+
+          <div class="articles-grid">
+            <!-- Article 1: How to Calculate Your Exact Age -->
+            <article class="article-card" style="cursor:pointer;" onclick="location.href='article.html?id=age-calculator'">
+              <div class="article-img-wrap">
+                <img src="assets/images/article_age_calc.jpg" alt="Calendar date calculation" class="article-img" loading="lazy">
+              </div>
+              <div class="article-content">
+                <h3 class="article-title"><a href="article.html?id=age-calculator">How to Calculate Your Exact Age</a></h3>
+                <p class="article-excerpt">A step-by-step guide to calculate your age in years, months and days with examples.</p>
+                <div class="article-meta-row">
+                  <span class="article-date">Mar 10, 2025</span>
+                  <span class="article-tag-pill tag-utilities">Utilities</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article 2: Pregnancy Due Date Calculator: Complete Guide -->
+            <article class="article-card" style="cursor:pointer;" onclick="location.href='article.html?id=pregnancy-due-date'">
+              <div class="article-img-wrap">
+                <img src="assets/images/article_pregnancy.jpg" alt="Pregnancy ultrasound scan guide" class="article-img" loading="lazy">
+              </div>
+              <div class="article-content">
+                <h3 class="article-title"><a href="article.html?id=pregnancy-due-date">Pregnancy Due Date Calculator: Complete Guide</a></h3>
+                <p class="article-excerpt">Learn how due dates are calculated, important factors and week-by-week pregnancy information.</p>
+                <div class="article-meta-row">
+                  <span class="article-date">Mar 8, 2025</span>
+                  <span class="article-tag-pill tag-pregnancy">Pregnancy</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Article 3: How Phone Finder Apps Work -->
+            <article class="article-card" style="cursor:pointer;" onclick="location.href='article.html?id=phone-finder'">
+              <div class="article-img-wrap">
+                <img src="assets/images/article_phone_finder.svg" alt="Phone acoustic sound finder illustration" class="article-img" loading="lazy">
+              </div>
+              <div class="article-content">
+                <h3 class="article-title"><a href="article.html?id=phone-finder">How Phone Finder Apps Work</a></h3>
+                <p class="article-excerpt">Understand how clap to find phone apps work and how you can use them effectively.</p>
+                <div class="article-meta-row">
+                  <span class="article-date">Mar 5, 2025</span>
+                  <span class="article-tag-pill tag-android">Android</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. ABOUT APPSCHANCE SECTION -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="about-card">
+            
+            <!-- Anjali Gupta Portrait -->
+            <div class="about-photo-wrapper">
+              <img src="assets/images/author_anjali.jpg" alt="Anjali Gupta - Founder of AppsChance" class="about-photo">
+            </div>
+
+            <!-- About Content -->
+            <div class="about-content">
+              <h2 class="about-title">About AppsChance</h2>
+              <p class="about-desc">
+                AppsChance is a platform by Anjali Gupta, focused on creating useful Android apps and sharing practical guides. Our goal is to make technology simple and helpful for everyone.
+              </p>
+
+              <div class="about-actions">
+                <a href="#about" class="btn-about-learn">
+                  <span>Learn More</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </a>
+              </div>
+
+              <!-- Stats Counter Bar -->
+              <div class="about-stats-row">
+                <!-- Stat 1: Android Apps -->
+                <div class="stat-item">
+                  <img src="assets/icons/stat_android.svg" alt="Android Apps" class="stat-icon" width="28" height="28">
+                  <div class="stat-info">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Android Apps</span>
+                  </div>
+                </div>
+
+                <!-- Stat 2: Helpful Articles -->
+                <div class="stat-item">
+                  <img src="assets/icons/stat_articles.svg" alt="Articles" class="stat-icon" width="28" height="28">
+                  <div class="stat-info">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Helpful Articles</span>
+                  </div>
+                </div>
+
+                <!-- Stat 3: Happy Users -->
+                <div class="stat-item">
+                  <img src="assets/icons/stat_users.svg" alt="Users" class="stat-icon" width="28" height="28">
+                  <div class="stat-info">
+                    <span class="stat-number">10K+</span>
+                    <span class="stat-label">Happy Users</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. STAY UPDATED (NEWSLETTER) SECTION -->
+      <section class="newsletter-section" id="newsletter">
+        <div class="container">
+          <div class="newsletter-card">
+            <div class="newsletter-left">
+              <div class="newsletter-icon-wrap">
+                <img src="assets/icons/icon_mail.svg" alt="Stay Updated" width="40" height="40">
+              </div>
+              <div>
+                <h3 class="newsletter-heading">Stay Updated</h3>
+                <p class="newsletter-text">Get the latest app updates, new articles and helpful tips directly in your inbox.</p>
+              </div>
+            </div>
+
+            <form class="newsletter-form" action="#" method="POST">
+              <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
+              <button type="submit" class="btn-subscribe">Subscribe</button>
+            </form>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- 7. SITE FOOTER -->
+    <footer class="site-footer" id="contact">
+      <div class="container">
+        
+        <!-- Footer Top Columns -->
+        <div class="footer-top-grid">
+          
+          <!-- Column 1: Brand Info -->
+          <div class="footer-col-brand">
+            <div class="footer-brand-logo">
+              <img src="assets/icons/logo_white.svg" alt="AppsChance White Logo" width="160" height="36">
+            </div>
+            <p class="footer-brand-tagline">
+              Useful Android apps and practical guides for everyday life.
+            </p>
+            
+            <!-- Social Icons -->
+            <div class="footer-social-links">
+              <!-- Facebook -->
+              <a href="#facebook" class="social-icon-link" aria-label="Facebook" title="Facebook">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </a>
+              <!-- Twitter / X -->
+              <a href="#twitter" class="social-icon-link" aria-label="Twitter" title="Twitter">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+              <!-- YouTube -->
+              <a href="#youtube" class="social-icon-link" aria-label="YouTube" title="YouTube">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/>
+                </svg>
+              </a>
+              <!-- Pinterest -->
+              <a href="#pinterest" class="social-icon-link" aria-label="Pinterest" title="Pinterest">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.291 1.199-.334 1.357-.053.225-.174.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.545.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/>
+                </svg>
+              </a>
+              <!-- Instagram -->
+              <a href="#instagram" class="social-icon-link" aria-label="Instagram" title="Instagram">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2: Quick Links -->
+          <div class="footer-col-links">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="#home">Home</a></li>
+              <li class="footer-link-item"><a href="#apps">Apps</a></li>
+              <li class="footer-link-item"><a href="#blog">Blog</a></li>
+              <li class="footer-link-item"><a href="#categories">Categories</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Support -->
+          <div class="footer-col-links">
+            <h4 class="footer-col-title">Support</h4>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="#about">About</a></li>
+              <li class="footer-link-item"><a href="#contact">Contact</a></li>
+              <li class="footer-link-item"><a href="#privacy">Privacy Policy</a></li>
+              <li class="footer-link-item"><a href="#terms">Terms of Service</a></li>
+              <li class="footer-link-item"><a href="#disclaimer">Disclaimer</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 4: Popular Categories -->
+          <div class="footer-col-links">
+            <h4 class="footer-col-title">Popular Categories</h4>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="#categories">Pregnancy</a></li>
+              <li class="footer-link-item"><a href="#categories">Utilities</a></li>
+              <li class="footer-link-item"><a href="#categories">Android</a></li>
+              <li class="footer-link-item"><a href="#categories">Education</a></li>
+              <li class="footer-link-item"><a href="#categories">Lifestyle</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <p>© 2025 AppsChance. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#sitemap">Sitemap</a>
+            <span>|</span>
+            <span>Designed with ❤️ for a better everyday life.</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================================================
+       SIDE-BY-SIDE SPLIT WRAPPER
+       (Rendered when clicking 'Side-by-Side Comparison' to match screenshot 1:1)
+       ========================================================================== -->
+  <div class="split-wrapper" id="splitModeWrapper">
+    <!-- Desktop Side Column -->
+    <div class="split-col-desktop">
+      <div class="split-badge-tag">
+        <span>Desktop View</span>
+        <span style="font-weight:400; font-size:12px; opacity:0.8;">1200px Grid</span>
+      </div>
+      <!-- Desktop clone content -->
+      <div id="desktopCloneSlot"></div>
+    </div>
+
+    <!-- Mobile Side Column -->
+    <div class="split-col-mobile">
+      <div class="split-badge-tag">
+        <span>Mobile View</span>
+        <span style="font-weight:400; font-size:12px; opacity:0.8;">390px Viewport</span>
+      </div>
+      <!-- Mobile specialized render container -->
+      <div class="mobile-view-render" id="mobileCloneSlot"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MOBILE DRAWER MENU & BACKDROP OVERLAY
+       ========================================================================== -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <img src="assets/icons/logo.svg" alt="AppsChance" width="130" height="32">
+      <button type="button" class="btn-close-drawer" id="btnCloseDrawer" aria-label="Close menu">✕</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="#home" class="drawer-link active">Home</a></li>
+      <li><a href="#apps" class="drawer-link">Apps</a></li>
+      <li><a href="#blog" class="drawer-link">Blog</a></li>
+      <li><a href="#categories" class="drawer-link">Categories</a></li>
+      <li><a href="#about" class="drawer-link">About</a></li>
+      <li><a href="#contact" class="drawer-link">Contact</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid #f1f5f9;">
+      <a href="#apps" class="btn-primary" style="width:100%; justify-content:center;">Explore Apps</a>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       SEARCH MODAL
+       ========================================================================== -->
+  <div id="searchModal" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.65); backdrop-filter:blur(4px); z-index:2000; align-items:flex-start; justify-content:center; padding-top:100px;">
+    <div style="background:#ffffff; border-radius:16px; width:90%; max-width:580px; padding:24px; box-shadow:0 20px 40px rgba(0,0,0,0.25);">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+        <h3 style="font-size:17px; font-weight:700;">Search AppsChance</h3>
+        <button type="button" id="btnCloseSearch" style="font-size:18px; color:#64748b; padding:4px 8px; border-radius:6px; cursor:pointer;">✕</button>
+      </div>
+      <input type="text" id="siteSearchInput" placeholder="Search guides, calculators, tools, fasting dates..." style="width:100%; padding:14px 18px; border:2px solid #2563eb; border-radius:10px; font-size:15px; outline:none;">
+      <div style="margin-top:16px; font-size:12.5px; color:#64748b;">
+        <span>Popular: </span>
+        <a href="#apps" style="color:#2563eb; margin-right:8px;">Pregnancy Due Date</a>
+        <a href="#apps" style="color:#2563eb; margin-right:8px;">Age Calculator</a>
+        <a href="#apps" style="color:#2563eb; margin-right:8px;">DropSize</a>
+        <a href="#apps" style="color:#2563eb;">Vrat Sathi</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/script.js"></script>
+
+  <!-- Side-by-side comparison populator script -->
+  <script>
+    // Duplicate content for the side-by-side screenshot simulation mode
+    window.addEventListener('DOMContentLoaded', () => {
+      const mainApp = document.getElementById('mainAppContainer');
+      const desktopSlot = document.getElementById('desktopCloneSlot');
+      const mobileSlot = document.getElementById('mobileCloneSlot');
+
+      if (mainApp && desktopSlot && mobileSlot) {
+        desktopSlot.innerHTML = mainApp.innerHTML;
+        mobileSlot.innerHTML = mainApp.innerHTML;
+      }
+    });
+  </script>
+
+</body>
+</html>
