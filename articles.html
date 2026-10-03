@@ -241,17 +241,51 @@
   <!-- Dynamic Catalog Renderer Script -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      renderArticlesCatalog('all');
+      const urlCategory = new URLSearchParams(window.location.search).get('category') || 'all';
+      
+      // Highlight matching filter button
+      const buttons = document.querySelectorAll('.filter-tab-btn');
+      buttons.forEach(btn => {
+        if (btn.getAttribute('data-filter').toLowerCase() === urlCategory.toLowerCase()) {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        }
+      });
+
+      renderArticlesCatalog(urlCategory);
       setupCategoryFilters();
+      setupSearchFilter();
     });
 
-    function renderArticlesCatalog(filterCategory) {
+    function renderArticlesCatalog(filterCategory, searchQuery = '') {
       const grid = document.getElementById('articlesCatalogGrid');
       if (!grid) return;
 
-      const filtered = (filterCategory === 'all') 
+      let filtered = (filterCategory === 'all' || !filterCategory) 
         ? APPSCHANCE_ARTICLES 
         : APPSCHANCE_ARTICLES.filter(a => a.category.toLowerCase() === filterCategory.toLowerCase());
+
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase();
+        filtered = filtered.filter(a => 
+          a.title.toLowerCase().includes(q) || 
+          a.excerpt.toLowerCase().includes(q) || 
+          a.category.toLowerCase().includes(q)
+        );
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column:1/-1; text-align:center; padding:60px 20px; background:#f8fafc; border-radius:16px; border:1px dashed #cbd5e1;">
+            <p style="font-size:18px; font-weight:700; color:#0f172a; margin-bottom:8px;">No articles found</p>
+            <p style="font-size:14px; color:#64748b; margin-bottom:20px;">Try selecting another category or searching for different keywords.</p>
+            <button type="button" class="btn-primary" onclick="renderArticlesCatalog('all'); document.querySelectorAll('.filter-tab-btn').forEach(b => b.classList.remove('active')); document.querySelector('[data-filter=all]').classList.add('active');">
+              View All Articles
+            </button>
+          </div>
+        `;
+        return;
+      }
 
       grid.innerHTML = filtered.map(article => `
         <article class="article-card" style="cursor:pointer;" onclick="location.href='article.html?id=${article.id}'">
@@ -288,6 +322,17 @@
           renderArticlesCatalog(category);
         });
       });
+    }
+
+    function setupSearchFilter() {
+      const searchInput = document.getElementById('siteSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const activeBtn = document.querySelector('.filter-tab-btn.active');
+          const currentCategory = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+          renderArticlesCatalog(currentCategory, e.target.value);
+        });
+      }
     }
   </script>
 
