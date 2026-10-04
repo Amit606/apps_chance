@@ -1,0 +1,208 @@
+/**
+ * AppsChance - Official Apps Database (Android & iOS)
+ * Comprehensive app data with store links, platform availability,
+ * ratings, metrics, and feature lists.
+ */
+
+const APPSCHANCE_APPS = [
+  {
+    id: "pregnancy-calculator",
+    name: "Pregnancy Calculator",
+    subtitle: "Due Date & Baby Tracker",
+    tagline: "Track your pregnancy dates, baby growth and milestones day by day.",
+    description: "An intuitive pregnancy tracker and due date calculator designed for expecting mothers. Calculate gestational age, track baby kick counts, monitor weekly milestones, and prepare hospital bag checklists.",
+    category: "Health & Fitness",
+    categoryKey: "health",
+    icon: "assets/icons/app_pregnancy.svg",
+    platforms: ["android", "ios"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.appschance.pregnancycalculator",
+    appStoreUrl: "https://apps.apple.com/app/pregnancy-calculator-due-date/id1623849101",
+    rating: "4.9",
+    reviewsCount: "28.4K",
+    downloads: "500K+",
+    size: "14 MB",
+    badge: "Most Popular",
+    isFeatured: true,
+    features: [
+      "Exact Due Date & Conception Estimator",
+      "Week-by-week fetal growth visualizer",
+      "Interactive contraction & kick counter",
+      "100% offline & private health logging"
+    ]
+  },
+  {
+    id: "dropsize",
+    name: "DropSize",
+    subtitle: "Photo Resizer & Compressor",
+    tagline: "Resize and compress images easily to exact KB/MB without quality loss.",
+    description: "Lightning-fast image compressor and batch photo resizer. Easily shrink JPEG, PNG, and WebP files to exact target sizes for government job portals, email attachments, and web publishing.",
+    category: "Utilities",
+    categoryKey: "utilities",
+    icon: "assets/icons/app_dropsize.svg",
+    platforms: ["android", "ios"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.appschance.dropsize",
+    appStoreUrl: "https://apps.apple.com/app/dropsize-image-compressor/id1634928102",
+    rating: "4.8",
+    reviewsCount: "19.1K",
+    downloads: "350K+",
+    size: "9 MB",
+    badge: "Top Utility",
+    isFeatured: true,
+    features: [
+      "Compress to custom target KB/MB",
+      "Batch process up to 50 photos at once",
+      "Preset dimensions for exams & passports",
+      "Zero server uploads - processed on-device"
+    ]
+  },
+  {
+    id: "vrat-sathi",
+    name: "Vrat Sathi",
+    subtitle: "Hindu Fasting Calendar & Vidhi",
+    tagline: "Your guide for fasting dates, auspicious muhurat, rules and reminders.",
+    description: "A complete Hindu calendar and fasting companion. Provides accurate Ekadashi, Pradosh, Shivratri, Sankashti Chaturthi, and Navratri dates with panchang, sunrise/sunset times, and fasting recipes.",
+    category: "Lifestyle & Culture",
+    categoryKey: "lifestyle",
+    icon: "assets/icons/app_vrat.svg",
+    platforms: ["android", "ios"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.appschance.vratsathi",
+    appStoreUrl: "https://apps.apple.com/app/vrat-sathi-fasting-calendar/id1641029103",
+    rating: "4.9",
+    reviewsCount: "32.6K",
+    downloads: "400K+",
+    size: "11 MB",
+    badge: "Culturally Beloved",
+    isFeatured: true,
+    features: [
+      "Localized Panchang & Tithi timings",
+      "Timely reminders before fasting days",
+      "Authentic Vrat Katha & Puja Vidhi",
+      "Works completely without internet"
+    ]
+  },
+  {
+    id: "alumni-connect",
+    name: "Harcourtian Alumni Connect",
+    subtitle: "University Community Network",
+    tagline: "Connect with alumni, discover career mentorship, and stay updated.",
+    description: "The dedicated networking community for university alumni, students, and faculty. Find batchmates worldwide, join career circles, organize reunions, and discover job openings across the network.",
+    category: "Education & Social",
+    categoryKey: "education",
+    icon: "assets/icons/app_alumni.svg",
+    platforms: ["android", "ios"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.appschance.harcourtian",
+    appStoreUrl: "https://apps.apple.com/app/harcourtian-alumni-connect/id1647829103",
+    rating: "4.7",
+    reviewsCount: "8.9K",
+    downloads: "100K+",
+    size: "18 MB",
+    badge: "Community",
+    isFeatured: true,
+    features: [
+      "Verified alumni directory & batch lookup",
+      "Mentorship and career referral circles",
+      "Event RSVP and reunion management",
+      "Direct end-to-end messaging"
+    ]
+  },
+  {
+    id: "phone-sound",
+    name: "Find Phone by Sounds",
+    subtitle: "Clap & Whistle Finder",
+    tagline: "Find your phone with clap or sound even when it is on silent mode.",
+    description: "Never lose your misplaced phone around the house again. Just clap your hands or whistle, and your phone will ring aloud, flash its flashlight, and vibrate even in deep silent or Do-Not-Disturb mode.",
+    category: "Utilities",
+    categoryKey: "utilities",
+    icon: "assets/icons/app_phone_sound.svg",
+    platforms: ["android"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.appschance.findphonebysound",
+    appStoreUrl: null,
+    rating: "4.6",
+    reviewsCount: "24.5K",
+    downloads: "1M+",
+    size: "8 MB",
+    badge: "Essential Tool",
+    isFeatured: true,
+    features: [
+      "Accurate clap & whistle audio detection",
+      "Works through blankets, cushions, and bags",
+      "High-power flashlight alert strobe",
+      "Low battery consumption standby engine"
+    ]
+  },
+  {
+    id: "mindful-habits",
+    name: "Mindful Daily Habits",
+    subtitle: "Routine & Streak Planner",
+    tagline: "Build lasting positive routines and mindful habits with clean tracking.",
+    description: "A minimalist daily habit tracker designed to help you form lasting routines. Visual streak calendars, smart motivational widgets, flexible scheduling, and detailed weekly progress insights.",
+    category: "Productivity",
+    categoryKey: "productivity",
+    icon: "assets/icons/app_habits.svg",
+    platforms: ["android", "ios"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.appschance.mindfulhabits",
+    appStoreUrl: "https://apps.apple.com/app/mindful-daily-habits-tracker/id1658930105",
+    rating: "4.9",
+    reviewsCount: "15.3K",
+    downloads: "250K+",
+    size: "15 MB",
+    badge: "Trending",
+    isFeatured: false,
+    features: [
+      "Custom habit frequencies (daily/weekly/monthly)",
+      "Interactive home screen widgets",
+      "Streak freeze and recovery protection",
+      "Dark mode & customizable color themes"
+    ]
+  },
+  {
+    id: "quick-budget",
+    name: "QuickBudget",
+    subtitle: "Smart Expense & Money Manager",
+    tagline: "Effortless personal finance logging and monthly budget analytics.",
+    description: "Take control of your spending with zero spreadsheet headaches. Log expenses in 2 seconds, categorize cash and digital transactions, analyze monthly spending trends, and receive smart budget limit alerts.",
+    category: "Utilities",
+    categoryKey: "utilities",
+    icon: "assets/icons/app_budget.svg",
+    platforms: ["android", "ios"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.appschance.quickbudget",
+    appStoreUrl: "https://apps.apple.com/app/quickbudget-expense-manager/id1669041106",
+    rating: "4.8",
+    reviewsCount: "11.7K",
+    downloads: "180K+",
+    size: "12 MB",
+    badge: "Finance",
+    isFeatured: false,
+    features: [
+      "One-tap rapid expense recording",
+      "Visual pie charts & category breakdowns",
+      "Recurring bill reminders & alerts",
+      "Export to CSV/Excel anytime"
+    ]
+  },
+  {
+    id: "focus-flow",
+    name: "FocusFlow",
+    subtitle: "Pomodoro & Deep Work Timer",
+    tagline: "Master deep focus with ambient soundscapes and distraction-free timer.",
+    description: "A clean, beautiful Pomodoro timer crafted for students, writers, and deep work specialists. Features scientific 25/5 intervals, relaxing lo-fi and nature soundscapes, and comprehensive study session analytics.",
+    category: "Productivity",
+    categoryKey: "productivity",
+    icon: "assets/icons/app_focus.svg",
+    platforms: ["ios", "android"],
+    playStoreUrl: "https://play.google.com/store/apps/details?id=com.appschance.focusflow",
+    appStoreUrl: "https://apps.apple.com/app/focusflow-pomodoro-timer/id1670152107",
+    rating: "4.9",
+    reviewsCount: "7.8K",
+    downloads: "120K+",
+    size: "16 MB",
+    badge: "New Release",
+    isFeatured: false,
+    features: [
+      "Customizable work / rest intervals",
+      "Integrated white noise & lo-fi rain sounds",
+      "Session history and daily productivity score",
+      "Minimalist OLED true black mode"
+    ]
+  }
+];

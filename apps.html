@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Android &amp; iOS Apps - AppsChance</title>
+  <meta name="description" content="Discover AppsChance official mobile apps for Android and iOS. Download lightweight, practical calculators, fasting calendars, and daily utilities from Google Play and Apple App Store.">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/logo.svg">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- VIEW MODE SWITCHER BAR -->
+  <header class="view-mode-bar" id="viewModeBar">
+    <div class="view-mode-brand">
+      <span class="view-mode-badge">Preview Mode</span>
+      <span>AppsChance Presentation</span>
+    </div>
+    <div class="view-mode-buttons">
+      <button type="button" class="view-mode-btn active" id="btnViewLive" title="Fluid Responsive Layout">
+        <span>⚡ Responsive Live</span>
+      </button>
+      <button type="button" class="view-mode-btn" id="btnViewDesktop" title="Preview Desktop View">
+        <span>🖥️ Desktop View</span>
+      </button>
+      <button type="button" class="view-mode-btn" id="btnViewMobile" title="Preview Mobile View in Phone Frame">
+        <span>📱 Mobile View</span>
+      </button>
+    </div>
+    <button type="button" class="view-mode-close" id="btnCloseViewBar" title="Hide this toolbar">
+      <span>✕ Dismiss</span>
+    </button>
+  </header>
+
+  <div class="app-view-container" id="mainAppContainer">
+
+    <!-- SITE HEADER / NAVBAR -->
+    <header class="site-header">
+      <div class="container nav-container">
+        <!-- Logo -->
+        <a href="index.html" class="brand-logo" aria-label="AppsChance Home">
+          <img src="assets/icons/logo.svg" alt="AppsChance Logo" width="160" height="38">
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="nav-menu-wrapper" aria-label="Main Navigation">
+          <ul class="nav-menu">
+            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item"><a href="apps.html" class="nav-link active">Apps</a></li>
+            <li class="nav-item"><a href="articles.html" class="nav-link">Blog</a></li>
+            <li class="nav-item"><a href="index.html#categories" class="nav-link">Categories</a></li>
+            <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <!-- Right Actions: Search & Mobile Menu Button -->
+        <div class="nav-actions">
+          <button type="button" class="btn-search" aria-label="Search articles and apps" title="Search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          
+          <button type="button" class="btn-mobile-toggle" aria-label="Open mobile navigation menu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- PAGE HERO BANNER -->
+    <section class="page-hero-banner">
+      <div class="container">
+        <!-- Breadcrumbs -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumbs" style="justify-content:center; margin-bottom:12px;">
+          <a href="index.html">Home</a>
+          <span class="breadcrumb-separator">›</span>
+          <span class="breadcrumb-current">All Apps</span>
+        </nav>
+
+        <span class="page-hero-badge">📲 Google Play &amp; Apple App Store</span>
+        <h1 class="page-hero-title">Our Android &amp; iOS Apps</h1>
+        <p class="page-hero-subtitle">
+          Explore our collection of lightweight, privacy-friendly, and practical mobile applications. Designed to solve real everyday needs with intuitive simplicity.
+        </p>
+
+        <!-- Interactive Platform & Category Filter Tabs -->
+        <div class="filter-tabs-wrapper">
+          <button type="button" class="filter-tab-btn active" data-platform="all" data-category="all">
+            <span>All Apps (8)</span>
+          </button>
+          <button type="button" class="filter-tab-btn" data-platform="android">
+            <img src="assets/icons/icon_playstore.svg" alt="Google Play" width="14" height="14" style="vertical-align:middle; margin-right:4px;">
+            <span>Android (Play Store)</span>
+          </button>
+          <button type="button" class="filter-tab-btn" data-platform="ios">
+            <img src="assets/icons/icon_apple.svg" alt="Apple App Store" width="14" height="14" style="vertical-align:middle; margin-right:4px;">
+            <span>iOS (App Store)</span>
+          </button>
+          <button type="button" class="filter-tab-btn" data-category="utilities">
+            <span>Utilities</span>
+          </button>
+          <button type="button" class="filter-tab-btn" data-category="health">
+            <span>Health &amp; Lifestyle</span>
+          </button>
+          <button type="button" class="filter-tab-btn" data-category="productivity">
+            <span>Productivity</span>
+          </button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="apps-search-box">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="text" id="appsSearchInput" placeholder="Search apps by name, features, or keywords..." aria-label="Search apps">
+        </div>
+      </div>
+    </section>
+
+    <!-- APPS CATALOG GRID -->
+    <main class="apps-catalog-section">
+      <div class="container">
+        <!-- Result count bar -->
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; padding-bottom:12px; border-bottom:1px solid #f1f5f9;">
+          <p id="appsCountNotice" style="font-size:14px; font-weight:600; color:#475569;">
+            Showing all 8 applications
+          </p>
+          <div style="font-size:12.5px; color:#64748b; display:flex; align-items:center; gap:16px;">
+            <span style="display:inline-flex; align-items:center; gap:6px;">
+              <span style="width:8px; height:8px; border-radius:50%; background:#22c55e;"></span>
+              Direct Store Downloads
+            </span>
+          </div>
+        </div>
+
+        <!-- Dynamic Grid Container -->
+        <div class="apps-catalog-grid" id="appsCatalogGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </main>
+
+    <!-- FEATURE SPOTLIGHT: WHY CHOOSE APPSCHANCE -->
+    <section class="apps-feature-spotlight">
+      <div class="container">
+        <div class="section-header" style="text-align:center; max-width:680px; margin:0 auto 36px;">
+          <div>
+            <h2 class="section-title">Built with Care for Daily Life</h2>
+            <p class="section-subtitle">Every application is engineered with high standards of performance, security, and accessibility.</p>
+          </div>
+        </div>
+
+        <div class="spotlight-grid">
+          <!-- Spotlight 1 -->
+          <div class="spotlight-card">
+            <div class="spotlight-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+              </svg>
+            </div>
+            <h3 class="spotlight-title">Ultra Lightweight</h3>
+            <p class="spotlight-desc">Optimized file sizes under 20MB. Quick downloads, low storage consumption, and minimal battery drain.</p>
+          </div>
+
+          <!-- Spotlight 2 -->
+          <div class="spotlight-card">
+            <div class="spotlight-icon-wrap" style="background:#ecfdf5; color:#059669;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="spotlight-title">100% Privacy-First</h3>
+            <p class="spotlight-desc">Your health, pregnancy, and personal logs stay securely on your device with zero unauthorized cloud sharing.</p>
+          </div>
+
+          <!-- Spotlight 3 -->
+          <div class="spotlight-card">
+            <div class="spotlight-icon-wrap" style="background:#fffbeb; color:#d97706;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+              </svg>
+            </div>
+            <h3 class="spotlight-title">Works Completely Offline</h3>
+            <p class="spotlight-desc">Essential tools, calendars, image compressors, and calculators function reliably even with zero internet signal.</p>
+          </div>
+
+          <!-- Spotlight 4 -->
+          <div class="spotlight-card">
+            <div class="spotlight-icon-wrap" style="background:#fdf2f8; color:#db2777;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+              </svg>
+            </div>
+            <h3 class="spotlight-title">Regular Updates</h3>
+            <p class="spotlight-desc">Continuously maintained and tested for full compatibility with the latest Android 15 &amp; iOS 18 updates.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STAY UPDATED SECTION -->
+    <section class="newsletter-section" id="newsletter">
+      <div class="container">
+        <div class="newsletter-card">
+          <div class="newsletter-left">
+            <div class="newsletter-icon-wrap">
+              <img src="assets/icons/icon_mail.svg" alt="Stay Updated" width="40" height="40">
+            </div>
+            <div>
+              <h3 class="newsletter-heading">Stay Updated on New Releases</h3>
+              <p class="newsletter-text">Get notified when we release new Android &amp; iOS apps, feature upgrades, and helpful tutorials.</p>
+            </div>
+          </div>
+
+          <form class="newsletter-form" action="#" method="POST">
+            <input type="email" class="newsletter-input" placeholder="Enter your email address" required aria-label="Email address">
+            <button type="submit" class="btn-subscribe">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- SITE FOOTER -->
+    <footer class="site-footer">
+      <div class="container">
+        
+        <div class="footer-top-grid">
+          <div class="footer-col-brand">
+            <div class="footer-brand-logo">
+              <img src="assets/icons/logo_white.svg" alt="AppsChance White Logo" width="160" height="36">
+            </div>
+            <p class="footer-brand-tagline">
+              Useful Android &amp; iOS apps and practical guides for everyday life.
+            </p>
+            
+            <div class="footer-social-links">
+              <a href="#facebook" class="social-icon-link" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+              <a href="#twitter" class="social-icon-link" aria-label="Twitter"><svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+              <a href="#youtube" class="social-icon-link" aria-label="YouTube"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33zM9.75 15.02V8.48l5.75 3.27-5.75 3.27z"/></svg></a>
+              <a href="#instagram" class="social-icon-link" aria-label="Instagram"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+            </div>
+          </div>
+
+          <div class="footer-col-links">
+            <h4 class="footer-col-title">Quick Links</h4>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="index.html">Home</a></li>
+              <li class="footer-link-item"><a href="apps.html">All Apps</a></li>
+              <li class="footer-link-item"><a href="articles.html">Blog &amp; Guides</a></li>
+              <li class="footer-link-item"><a href="index.html#categories">Categories</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col-links">
+            <h4 class="footer-col-title">Platforms</h4>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="apps.html?platform=android">Google Play Store</a></li>
+              <li class="footer-link-item"><a href="apps.html?platform=ios">Apple App Store</a></li>
+              <li class="footer-link-item"><a href="apps.html?category=utilities">Utilities Apps</a></li>
+              <li class="footer-link-item"><a href="apps.html?category=health">Health &amp; Lifestyle</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col-links">
+            <h4 class="footer-col-title">Support</h4>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="index.html#about">About Us</a></li>
+              <li class="footer-link-item"><a href="index.html#contact">Contact</a></li>
+              <li class="footer-link-item"><a href="#privacy">Privacy Policy</a></li>
+              <li class="footer-link-item"><a href="#terms">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <p>© 2025 AppsChance. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="#sitemap">Sitemap</a>
+            <span>|</span>
+            <span>Designed with ❤️ for a better everyday life.</span>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- MOBILE DRAWER & MODAL -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-label="Mobile Navigation Drawer">
+    <div class="drawer-header">
+      <img src="assets/icons/logo.svg" alt="AppsChance" width="130" height="32">
+      <button type="button" class="btn-close-drawer" id="btnCloseDrawer" aria-label="Close menu">✕</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="apps.html" class="drawer-link active">Apps</a></li>
+      <li><a href="articles.html" class="drawer-link">Blog</a></li>
+      <li><a href="index.html#categories" class="drawer-link">Categories</a></li>
+      <li><a href="index.html#about" class="drawer-link">About</a></li>
+      <li><a href="index.html#contact" class="drawer-link">Contact</a></li>
+    </ul>
+    <div style="margin-top:auto; padding-top:20px; border-top:1px solid #f1f5f9;">
+      <a href="apps.html" class="btn-primary" style="width:100%; justify-content:center;">Explore All Apps</a>
+    </div>
+  </aside>
+
+  <!-- SEARCH MODAL -->
+  <div id="searchModal" style="display:none; position:fixed; inset:0; background:rgba(15,23,42,0.65); backdrop-filter:blur(4px); z-index:2000; align-items:flex-start; justify-content:center; padding-top:100px;">
+    <div style="background:#ffffff; border-radius:16px; width:90%; max-width:580px; padding:24px; box-shadow:0 20px 40px rgba(0,0,0,0.25);">
+      <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:16px;">
+        <h3 style="font-size:17px; font-weight:700;">Search Apps &amp; Guides</h3>
+        <button type="button" id="btnCloseSearch" style="font-size:18px; color:#64748b; padding:4px 8px; border-radius:6px; cursor:pointer;">✕</button>
+      </div>
+      <input type="text" id="siteSearchInput" placeholder="Search Pregnancy, DropSize, Vrat Sathi, calculators..." style="width:100%; padding:14px 18px; border:2px solid #2563eb; border-radius:10px; font-size:15px; outline:none;">
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/apps-data.js"></script>
+  <script src="js/script.js"></script>
+  
+  <!-- Apps Catalog Dynamic Renderer Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      let activePlatform = urlParams.get('platform') || 'all';
+      let activeCategory = urlParams.get('category') || 'all';
+
+      // Highlight initial matching filter tab
+      const filterButtons = document.querySelectorAll('.filter-tab-btn');
+      filterButtons.forEach(btn => {
+        const btnPlat = btn.getAttribute('data-platform');
+        const btnCat = btn.getAttribute('data-category');
+        if ((btnPlat && btnPlat === activePlatform && activePlatform !== 'all') || 
+            (btnCat && btnCat === activeCategory && activeCategory !== 'all')) {
+          filterButtons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        }
+      });
+
+      renderAppsCatalog(activePlatform, activeCategory);
+      setupAppsFilters();
+      setupAppsSearch();
+    });
+
+    function renderAppsCatalog(platform = 'all', category = 'all', searchQuery = '') {
+      const grid = document.getElementById('appsCatalogGrid');
+      const countNotice = document.getElementById('appsCountNotice');
+      if (!grid) return;
+
+      let filtered = APPSCHANCE_APPS;
+
+      // Platform filter
+      if (platform !== 'all' && platform) {
+        filtered = filtered.filter(app => app.platforms.includes(platform.toLowerCase()));
+      }
+
+      // Category filter
+      if (category !== 'all' && category) {
+        filtered = filtered.filter(app => 
+          (app.categoryKey && app.categoryKey.toLowerCase() === category.toLowerCase()) ||
+          app.category.toLowerCase().includes(category.toLowerCase())
+        );
+      }
+
+      // Search filter
+      if (searchQuery.trim() !== '') {
+        const q = searchQuery.toLowerCase();
+        filtered = filtered.filter(app => 
+          app.name.toLowerCase().includes(q) ||
+          app.tagline.toLowerCase().includes(q) ||
+          app.description.toLowerCase().includes(q) ||
+          app.category.toLowerCase().includes(q) ||
+          app.features.some(f => f.toLowerCase().includes(q))
+        );
+      }
+
+      if (countNotice) {
+        countNotice.textContent = `Showing ${filtered.length} application${filtered.length === 1 ? '' : 's'}`;
+      }
+
+      if (filtered.length === 0) {
+        grid.innerHTML = `
+          <div style="grid-column:1/-1; text-align:center; padding:64px 20px; background:#f8fafc; border-radius:20px; border:2px dashed #cbd5e1;">
+            <div style="font-size:36px; margin-bottom:12px;">📱</div>
+            <h3 style="font-size:18px; font-weight:700; color:#0f172a; margin-bottom:8px;">No matching apps found</h3>
+            <p style="font-size:14px; color:#64748b; margin-bottom:20px; max-width:440px; margin-left:auto; margin-right:auto;">
+              Try clearing your search or switching to "All Apps" to view our complete collection.
+            </p>
+            <button type="button" class="btn-primary" onclick="resetFilters()">
+              View All Apps
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = filtered.map(app => {
+        const isAndroid = app.platforms.includes('android');
+        const isIos = app.platforms.includes('ios');
+        const hasBoth = isAndroid && isIos;
+
+        // Platform badge HTML
+        let platformBadgeHtml = '';
+        if (hasBoth) {
+          platformBadgeHtml = `
+            <span class="platform-tag tag-both">
+              <img src="assets/icons/icon_playstore.svg" width="11" height="11" alt="Play Store">
+              <img src="assets/icons/icon_apple.svg" width="11" height="11" alt="App Store">
+              Android &amp; iOS
+            </span>
+          `;
+        } else if (isAndroid) {
+          platformBadgeHtml = `
+            <span class="platform-tag tag-android">
+              <img src="assets/icons/icon_playstore.svg" width="11" height="11" alt="Play Store">
+              Google Play
+            </span>
+          `;
+        } else if (isIos) {
+          platformBadgeHtml = `
+            <span class="platform-tag tag-ios">
+              <img src="assets/icons/icon_apple.svg" width="11" height="11" alt="App Store">
+              App Store
+            </span>
+          `;
+        }
+
+        // Store Download Buttons HTML
+        let buttonsHtml = '';
+        if (hasBoth) {
+          buttonsHtml = `
+            <a href="${app.playStoreUrl}" target="_blank" rel="noopener noreferrer" class="btn-store-primary playstore" title="Download ${app.name} on Google Play">
+              <img src="assets/icons/icon_playstore.svg" alt="Play Store" width="18" height="18">
+              <span>Google Play</span>
+            </a>
+            <a href="${app.appStoreUrl}" target="_blank" rel="noopener noreferrer" class="btn-store-primary appstore" title="Download ${app.name} on Apple App Store">
+              <img src="assets/icons/icon_apple.svg" alt="App Store" width="18" height="18">
+              <span>App Store</span>
+            </a>
+          `;
+        } else if (isAndroid) {
+          buttonsHtml = `
+            <a href="${app.playStoreUrl}" target="_blank" rel="noopener noreferrer" class="btn-store-primary playstore single" title="Get ${app.name} on Google Play">
+              <img src="assets/icons/icon_playstore.svg" alt="Play Store" width="20" height="20">
+              <span>Get on Google Play</span>
+            </a>
+          `;
+        } else if (isIos) {
+          buttonsHtml = `
+            <a href="${app.appStoreUrl}" target="_blank" rel="noopener noreferrer" class="btn-store-primary appstore single" title="Download ${app.name} on App Store">
+              <img src="assets/icons/icon_apple.svg" alt="App Store" width="20" height="20">
+              <span>Download on App Store</span>
+            </a>
+          `;
+        }
+
+        // Feature items
+        const featuresHtml = app.features.map(f => `
+          <li class="app-catalog-feature-item">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span>${f}</span>
+          </li>
+        `).join('');
+
+        return `
+          <article class="app-catalog-card" id="card-${app.id}">
+            <div class="app-catalog-top">
+              <div class="app-catalog-icon-wrap">
+                <img src="${app.icon}" alt="${app.name}" width="72" height="72" loading="lazy">
+              </div>
+              <div class="app-catalog-header-info">
+                <div class="app-catalog-badge-row">
+                  ${platformBadgeHtml}
+                  <span style="font-size:11px; font-weight:600; padding:2px 7px; border-radius:6px; background:#f1f5f9; color:#475569;">
+                    ${app.category}
+                  </span>
+                  ${app.badge ? `<span style="font-size:11px; font-weight:700; padding:2px 7px; border-radius:6px; background:#fef3c7; color:#92400e;">${app.badge}</span>` : ''}
+                </div>
+                <h2 class="app-catalog-title">${app.name}</h2>
+                <p class="app-catalog-subtitle">${app.subtitle}</p>
+                <div class="app-catalog-meta-row">
+                  <span class="app-catalog-rating">
+                    <span class="star">★</span> ${app.rating}
+                    <span style="font-weight:400; color:#64748b;">(${app.reviewsCount})</span>
+                  </span>
+                  <span>•</span>
+                  <span class="app-catalog-downloads">${app.downloads}</span>
+                  <span>•</span>
+                  <span style="color:#64748b;">${app.size}</span>
+                </div>
+              </div>
+            </div>
+
+            <p class="app-catalog-desc">${app.description}</p>
+
+            <ul class="app-catalog-features-list">
+              ${featuresHtml}
+            </ul>
+
+            <div class="app-catalog-actions">
+              ${buttonsHtml}
+            </div>
+          </article>
+        `;
+      }).join('');
+
+      // Enable clicking anywhere on the card to open store
+      grid.querySelectorAll('.app-catalog-card').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+          if (e.target.closest('a')) return;
+          const firstStoreBtn = card.querySelector('.btn-store-primary');
+          if (firstStoreBtn && firstStoreBtn.href) {
+            window.open(firstStoreBtn.href, '_blank', 'noopener,noreferrer');
+          }
+        });
+      });
+    }
+
+    function setupAppsFilters() {
+      const buttons = document.querySelectorAll('.filter-tab-btn');
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          buttons.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const platform = btn.getAttribute('data-platform') || 'all';
+          const category = btn.getAttribute('data-category') || 'all';
+          const searchInput = document.getElementById('appsSearchInput');
+          const searchVal = searchInput ? searchInput.value : '';
+
+          renderAppsCatalog(platform, category, searchVal);
+        });
+      });
+    }
+
+    function setupAppsSearch() {
+      const searchInput = document.getElementById('appsSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+          const activeBtn = document.querySelector('.filter-tab-btn.active');
+          const platform = activeBtn ? (activeBtn.getAttribute('data-platform') || 'all') : 'all';
+          const category = activeBtn ? (activeBtn.getAttribute('data-category') || 'all') : 'all';
+          renderAppsCatalog(platform, category, e.target.value);
+        });
+      }
+    }
+
+    function resetFilters() {
+      const buttons = document.querySelectorAll('.filter-tab-btn');
+      buttons.forEach(b => b.classList.remove('active'));
+      const allBtn = document.querySelector('.filter-tab-btn[data-platform="all"]');
+      if (allBtn) allBtn.classList.add('active');
+      const searchInput = document.getElementById('appsSearchInput');
+      if (searchInput) searchInput.value = '';
+      renderAppsCatalog('all', 'all');
+    }
+  </script>
+
+</body>
+</html>

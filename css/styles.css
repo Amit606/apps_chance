@@ -2641,3 +2641,469 @@ body.force-split-mode .app-view-container {
     padding: 20px;
   }
 }
+
+/* ==========================================================================
+   ANDROID & iOS APPS - STORE BUTTONS & PLATFORM BADGES
+   ========================================================================== */
+.card-platform-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.platform-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 6px;
+  line-height: 1.2;
+}
+
+.platform-tag.tag-android {
+  background: #e8f5e9;
+  color: #1b5e20;
+  border: 1px solid #c8e6c9;
+}
+
+.platform-tag.tag-ios {
+  background: #f1f5f9;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+}
+
+.platform-tag.tag-both {
+  background: linear-gradient(135deg, #e8f5e9 0%, #eff6ff 100%);
+  color: #1e3a8a;
+  border: 1px solid #bfdbfe;
+}
+
+.card-store-actions {
+  display: flex;
+  gap: 6px;
+  width: 100%;
+  margin-top: auto;
+}
+
+.btn-store-badge {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 6px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-store-badge img,
+.btn-store-badge svg {
+  flex-shrink: 0;
+}
+
+.btn-store-badge.playstore {
+  background: #ffffff;
+  color: #1e293b;
+  border: 1px solid #cbd5e1;
+}
+
+.btn-store-badge.playstore:hover {
+  background: #f8fafc;
+  border-color: #3b82f6;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(59, 130, 246, 0.15);
+}
+
+.btn-store-badge.appstore {
+  background: #0f172a;
+  color: #ffffff;
+  border: 1px solid #0f172a;
+}
+
+.btn-store-badge.appstore:hover {
+  background: #1e293b;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+}
+
+.btn-store-badge.single-store {
+  flex: 1;
+  padding: 9px 12px;
+  font-size: 12px;
+}
+
+/* Home Apps Filter Pills */
+.home-apps-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 14px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+
+.home-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #f1f5f9;
+  color: #475569;
+  border: 1px solid #e2e8f0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.home-filter-btn:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.home-filter-btn.active {
+  background: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.25);
+}
+
+/* ==========================================================================
+   APPS CATALOG PAGE (apps.html)
+   ========================================================================== */
+.apps-catalog-section {
+  padding: 44px 0 84px;
+  background: #ffffff;
+}
+
+.apps-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+}
+
+.app-catalog-card {
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: 20px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.app-catalog-card:hover {
+  transform: translateY(-5px);
+  border-color: #bfdbfe;
+  box-shadow: 0 16px 36px -10px rgba(37, 99, 235, 0.12), 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.app-catalog-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.app-catalog-icon-wrap {
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.09);
+  transition: transform 0.3s ease;
+}
+
+.app-catalog-card:hover .app-catalog-icon-wrap {
+  transform: scale(1.04);
+}
+
+.app-catalog-header-info {
+  flex-grow: 1;
+}
+
+.app-catalog-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.app-catalog-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.25;
+  margin-bottom: 4px;
+}
+
+.app-catalog-subtitle {
+  font-size: 13px;
+  font-weight: 500;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+.app-catalog-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 12.5px;
+  color: #475569;
+}
+
+.app-catalog-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.app-catalog-rating .star {
+  color: #f59e0b;
+}
+
+.app-catalog-downloads {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: #64748b;
+}
+
+.app-catalog-desc {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #475569;
+  margin-bottom: 16px;
+}
+
+.app-catalog-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px 12px;
+}
+
+.app-catalog-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #334155;
+}
+
+.app-catalog-feature-item svg {
+  color: #10b981;
+  flex-shrink: 0;
+}
+
+/* Store Action CTAs on Catalog Card */
+.app-catalog-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+  padding-top: 18px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.btn-store-primary {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 11px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-store-primary.playstore {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1.5px solid #cbd5e1;
+}
+
+.btn-store-primary.playstore:hover {
+  background: #f8fafc;
+  border-color: #2563eb;
+  color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.15);
+}
+
+.btn-store-primary.appstore {
+  background: #0f172a;
+  color: #ffffff;
+  border: 1.5px solid #0f172a;
+}
+
+.btn-store-primary.appstore:hover {
+  background: #1e293b;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.25);
+}
+
+.btn-store-primary.single {
+  flex: 1;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+/* Feature Spotlight on Apps Page */
+.apps-feature-spotlight {
+  padding: 60px 0;
+  background: #f8fafc;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 36px;
+}
+
+.spotlight-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 24px 20px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-4px);
+  border-color: #bfdbfe;
+  box-shadow: var(--shadow-sm);
+}
+
+.spotlight-icon-wrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+}
+
+.spotlight-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.spotlight-desc {
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* Search bar on apps page */
+.apps-search-box {
+  position: relative;
+  max-width: 480px;
+  margin: 20px auto 0;
+}
+
+.apps-search-box input {
+  width: 100%;
+  padding: 12px 18px 12px 44px;
+  border-radius: 999px;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  font-size: 14px;
+  color: #0f172a;
+  outline: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.apps-search-box input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.apps-search-box svg {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+/* Media Queries for Apps page */
+@media (max-width: 992px) {
+  .apps-catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .spotlight-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-catalog-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .app-catalog-features-list {
+    grid-template-columns: 1fr;
+  }
+  .app-catalog-actions {
+    flex-direction: column;
+  }
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile adjustments for app-card store buttons */
+@media (max-width: 768px) {
+  .card-platform-row {
+    margin-bottom: 4px;
+  }
+  .card-store-actions {
+    display: none; /* Mobile uses row tap to open store */
+  }
+}
+
+/* Mobile-view-render support for store actions */
+.mobile-view-render .card-store-actions {
+  display: none !important;
+}
+
+.mobile-view-render .card-platform-row {
+  justify-content: flex-start;
+  margin-bottom: 2px;
+}
+

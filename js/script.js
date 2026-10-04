@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearchModal();
   initNewsletterForm();
   initCategoryInteractions();
+  initHomeAppsInteractions();
 });
 
 /* ==========================================================================
@@ -214,3 +215,51 @@ function showToast(message) {
     toast.style.display = 'none';
   }, 3200);
 }
+
+/* ==========================================================================
+   HOME APPS PLATFORM FILTERING & CARD INTERACTIONS
+   ========================================================================== */
+function initHomeAppsInteractions() {
+  const filterBtns = document.querySelectorAll('.home-filter-btn');
+  const cards = document.querySelectorAll('.apps-grid .app-card');
+
+  if (filterBtns.length > 0 && cards.length > 0) {
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.getAttribute('data-home-filter');
+
+        cards.forEach(card => {
+          const platforms = card.getAttribute('data-platforms') || '';
+          if (filter === 'all' || platforms.includes(filter)) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        const platformName = filter === 'android' ? 'Google Play (Android)' : (filter === 'ios' ? 'Apple App Store (iOS)' : 'All Apps');
+        showToast(`📱 Showing ${platformName}`);
+      });
+    });
+
+    // Make app cards clickable anywhere (including on mobile rows)
+    cards.forEach(card => {
+      card.style.cursor = 'pointer';
+      card.addEventListener('click', (e) => {
+        // If clicking on an anchor tag directly, allow default navigation
+        if (e.target.closest('a')) return;
+
+        // Otherwise open the primary store link
+        const firstStoreLink = card.querySelector('.btn-store-badge');
+        if (firstStoreLink && firstStoreLink.href) {
+          const isPlay = firstStoreLink.href.includes('play.google');
+          showToast(`🚀 Opening ${isPlay ? 'Google Play Store' : 'Apple App Store'}...`);
+          window.open(firstStoreLink.href, '_blank', 'noopener,noreferrer');
+        }
+      });
+    });
+  }
+}
+

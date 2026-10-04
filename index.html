@@ -57,7 +57,7 @@
         <nav class="nav-menu-wrapper" aria-label="Main Navigation">
           <ul class="nav-menu">
             <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
-            <li class="nav-item"><a href="#apps" class="nav-link">Apps</a></li>
+            <li class="nav-item"><a href="apps.html" class="nav-link">Apps</a></li>
             <li class="nav-item"><a href="articles.html" class="nav-link">Blog</a></li>
             <li class="nav-item"><a href="#categories" class="nav-link">Categories</a></li>
             <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
@@ -96,18 +96,18 @@
           <div class="hero-content">
             <h1 class="hero-title">Discover Useful Apps &amp; Practical Guides</h1>
             <p class="hero-description">
-              Explore our Android apps, helpful tools, and easy-to-understand guides for everyday life. Simple, useful and made for everyone.
+              Explore our Android &amp; iOS apps, helpful tools, and easy-to-understand guides for everyday life. Simple, useful and made for everyone.
             </p>
 
             <div class="hero-actions">
-              <a href="#apps" class="btn-primary">
-                <span>Explore Apps</span>
+              <a href="apps.html" class="btn-primary">
+                <span>Explore All Apps</span>
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </a>
-              <a href="#blog" class="btn-secondary">
+              <a href="articles.html" class="btn-secondary">
                 <span>Read Articles</span>
               </a>
             </div>
@@ -160,15 +160,15 @@
         </div>
       </section>
 
-      <!-- 2. OUR ANDROID APPS SECTION -->
+      <!-- 2. OUR ANDROID & iOS APPS SECTION -->
       <section class="apps-section" id="apps">
         <div class="container">
           <div class="section-header">
             <div>
-              <h2 class="section-title">Our Android Apps</h2>
-              <p class="section-subtitle">Useful and easy-to-use apps built for everyday needs.</p>
+              <h2 class="section-title">Our <span style="background:#e0f2fe; color:#0284c7; padding:2px 10px; border-radius:8px;">Android &amp; iOS Apps</span></h2>
+              <p class="section-subtitle">Useful and easy-to-use apps built for everyday needs on Google Play &amp; Apple App Store.</p>
             </div>
-            <a href="#apps" class="section-view-all">
+            <a href="apps.html" class="section-view-all">
               <span>View All Apps</span>
               <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -177,115 +177,178 @@
             </a>
           </div>
 
+          <!-- Quick Platform Filters on Home -->
+          <div class="home-apps-filters" id="homeAppsFilters">
+            <button type="button" class="home-filter-btn active" data-home-filter="all">All Apps (5)</button>
+            <button type="button" class="home-filter-btn" data-home-filter="android">
+              <img src="assets/icons/icon_playstore.svg" width="13" height="13" alt="Google Play">
+              <span>Google Play</span>
+            </button>
+            <button type="button" class="home-filter-btn" data-home-filter="ios">
+              <img src="assets/icons/icon_apple.svg" width="13" height="13" alt="App Store">
+              <span>App Store</span>
+            </button>
+          </div>
+
           <div class="apps-grid">
             <!-- App 1: Pregnancy Calculator -->
-            <div class="app-card">
+            <div class="app-card" data-platforms="android ios">
               <div class="app-icon-wrap">
                 <img src="assets/icons/app_pregnancy.svg" alt="Pregnancy Calculator" width="64" height="64">
               </div>
               <div class="app-card-details">
+                <div class="card-platform-row">
+                  <span class="platform-tag tag-both">
+                    <img src="assets/icons/icon_playstore.svg" width="10" height="10" alt="Play Store">
+                    <img src="assets/icons/icon_apple.svg" width="10" height="10" alt="App Store">
+                    Android &amp; iOS
+                  </span>
+                </div>
                 <h3 class="app-card-title">Pregnancy Calculator</h3>
                 <p class="app-card-desc">Track your pregnancy dates, baby growth and more.</p>
               </div>
-              <a href="#learn-pregnancy" class="btn-learn-more">
-                <span>Learn More</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </a>
-              <div class="app-mobile-arrow" style="display:none;">
+              <div class="card-store-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.appschance.pregnancycalculator" target="_blank" rel="noopener noreferrer" class="btn-store-badge playstore" title="Get on Google Play">
+                  <img src="assets/icons/icon_playstore.svg" width="13" height="13" alt="Play Store">
+                  <span>Play Store</span>
+                </a>
+                <a href="https://apps.apple.com/app/pregnancy-calculator-due-date/id1623849101" target="_blank" rel="noopener noreferrer" class="btn-store-badge appstore" title="Download on App Store">
+                  <img src="assets/icons/icon_apple.svg" width="13" height="13" alt="App Store">
+                  <span>App Store</span>
+                </a>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.appschance.pregnancycalculator" target="_blank" rel="noopener noreferrer" class="app-mobile-arrow" aria-label="Open Pregnancy Calculator store" style="display:none;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-              </div>
+              </a>
             </div>
 
             <!-- App 2: DropSize -->
-            <div class="app-card">
+            <div class="app-card" data-platforms="android ios">
               <div class="app-icon-wrap">
                 <img src="assets/icons/app_dropsize.svg" alt="DropSize" width="64" height="64">
               </div>
               <div class="app-card-details">
+                <div class="card-platform-row">
+                  <span class="platform-tag tag-both">
+                    <img src="assets/icons/icon_playstore.svg" width="10" height="10" alt="Play Store">
+                    <img src="assets/icons/icon_apple.svg" width="10" height="10" alt="App Store">
+                    Android &amp; iOS
+                  </span>
+                </div>
                 <h3 class="app-card-title">DropSize</h3>
                 <p class="app-card-desc">Resize and compress images easily.</p>
               </div>
-              <a href="#learn-dropsize" class="btn-learn-more">
-                <span>Learn More</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </a>
-              <div class="app-mobile-arrow" style="display:none;">
+              <div class="card-store-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.appschance.dropsize" target="_blank" rel="noopener noreferrer" class="btn-store-badge playstore" title="Get on Google Play">
+                  <img src="assets/icons/icon_playstore.svg" width="13" height="13" alt="Play Store">
+                  <span>Play Store</span>
+                </a>
+                <a href="https://apps.apple.com/app/dropsize-image-compressor/id1634928102" target="_blank" rel="noopener noreferrer" class="btn-store-badge appstore" title="Download on App Store">
+                  <img src="assets/icons/icon_apple.svg" width="13" height="13" alt="App Store">
+                  <span>App Store</span>
+                </a>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.appschance.dropsize" target="_blank" rel="noopener noreferrer" class="app-mobile-arrow" aria-label="Open DropSize store" style="display:none;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-              </div>
+              </a>
             </div>
 
             <!-- App 3: Vrat Sathi -->
-            <div class="app-card">
+            <div class="app-card" data-platforms="android ios">
               <div class="app-icon-wrap">
                 <img src="assets/icons/app_vrat.svg" alt="Vrat Sathi" width="64" height="64">
               </div>
               <div class="app-card-details">
+                <div class="card-platform-row">
+                  <span class="platform-tag tag-both">
+                    <img src="assets/icons/icon_playstore.svg" width="10" height="10" alt="Play Store">
+                    <img src="assets/icons/icon_apple.svg" width="10" height="10" alt="App Store">
+                    Android &amp; iOS
+                  </span>
+                </div>
                 <h3 class="app-card-title">Vrat Sathi</h3>
                 <p class="app-card-desc">Your guide for fasting dates, rules and reminders.</p>
               </div>
-              <a href="#learn-vrat" class="btn-learn-more">
-                <span>Learn More</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </a>
-              <div class="app-mobile-arrow" style="display:none;">
+              <div class="card-store-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.appschance.vratsathi" target="_blank" rel="noopener noreferrer" class="btn-store-badge playstore" title="Get on Google Play">
+                  <img src="assets/icons/icon_playstore.svg" width="13" height="13" alt="Play Store">
+                  <span>Play Store</span>
+                </a>
+                <a href="https://apps.apple.com/app/vrat-sathi-fasting-calendar/id1641029103" target="_blank" rel="noopener noreferrer" class="btn-store-badge appstore" title="Download on App Store">
+                  <img src="assets/icons/icon_apple.svg" width="13" height="13" alt="App Store">
+                  <span>App Store</span>
+                </a>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.appschance.vratsathi" target="_blank" rel="noopener noreferrer" class="app-mobile-arrow" aria-label="Open Vrat Sathi store" style="display:none;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-              </div>
+              </a>
             </div>
 
             <!-- App 4: Harcourtian Alumni Connect -->
-            <div class="app-card">
+            <div class="app-card" data-platforms="android ios">
               <div class="app-icon-wrap">
                 <img src="assets/icons/app_alumni.svg" alt="Harcourtian Alumni Connect" width="64" height="64">
               </div>
               <div class="app-card-details">
+                <div class="card-platform-row">
+                  <span class="platform-tag tag-both">
+                    <img src="assets/icons/icon_playstore.svg" width="10" height="10" alt="Play Store">
+                    <img src="assets/icons/icon_apple.svg" width="10" height="10" alt="App Store">
+                    Android &amp; iOS
+                  </span>
+                </div>
                 <h3 class="app-card-title">Harcourtian Alumni Connect</h3>
                 <p class="app-card-desc">Connect with alumni and stay updated.</p>
               </div>
-              <a href="#learn-alumni" class="btn-learn-more">
-                <span>Learn More</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </a>
-              <div class="app-mobile-arrow" style="display:none;">
+              <div class="card-store-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.appschance.harcourtian" target="_blank" rel="noopener noreferrer" class="btn-store-badge playstore" title="Get on Google Play">
+                  <img src="assets/icons/icon_playstore.svg" width="13" height="13" alt="Play Store">
+                  <span>Play Store</span>
+                </a>
+                <a href="https://apps.apple.com/app/harcourtian-alumni-connect/id1647829103" target="_blank" rel="noopener noreferrer" class="btn-store-badge appstore" title="Download on App Store">
+                  <img src="assets/icons/icon_apple.svg" width="13" height="13" alt="App Store">
+                  <span>App Store</span>
+                </a>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.appschance.harcourtian" target="_blank" rel="noopener noreferrer" class="app-mobile-arrow" aria-label="Open Alumni Connect store" style="display:none;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-              </div>
+              </a>
             </div>
 
             <!-- App 5: Find Phone by Sounds -->
-            <div class="app-card">
+            <div class="app-card" data-platforms="android">
               <div class="app-icon-wrap">
                 <img src="assets/icons/app_phone_sound.svg" alt="Find Phone by Sounds" width="64" height="64">
               </div>
               <div class="app-card-details">
+                <div class="card-platform-row">
+                  <span class="platform-tag tag-android">
+                    <img src="assets/icons/icon_playstore.svg" width="10" height="10" alt="Play Store">
+                    Google Play
+                  </span>
+                </div>
                 <h3 class="app-card-title">Find Phone by Sounds</h3>
                 <p class="app-card-desc">Find your phone with clap or sound.</p>
               </div>
-              <a href="#learn-phone" class="btn-learn-more">
-                <span>Learn More</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <polyline points="9 18 15 12 9 6"></polyline>
-                </svg>
-              </a>
-              <div class="app-mobile-arrow" style="display:none;">
+              <div class="card-store-actions">
+                <a href="https://play.google.com/store/apps/details?id=com.appschance.findphonebysound" target="_blank" rel="noopener noreferrer" class="btn-store-badge playstore single-store" title="Get on Google Play">
+                  <img src="assets/icons/icon_playstore.svg" width="14" height="14" alt="Play Store">
+                  <span>Get on Google Play</span>
+                </a>
+              </div>
+              <a href="https://play.google.com/store/apps/details?id=com.appschance.findphonebysound" target="_blank" rel="noopener noreferrer" class="app-mobile-arrow" aria-label="Open Find Phone by Sounds store" style="display:none;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                   <polyline points="9 18 15 12 9 6"></polyline>
                 </svg>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -577,7 +640,7 @@
             <h4 class="footer-col-title">Quick Links</h4>
             <ul class="footer-links-list">
               <li class="footer-link-item"><a href="#home">Home</a></li>
-              <li class="footer-link-item"><a href="#apps">Apps</a></li>
+              <li class="footer-link-item"><a href="apps.html">All Apps</a></li>
               <li class="footer-link-item"><a href="articles.html">Blog</a></li>
               <li class="footer-link-item"><a href="#categories">Categories</a></li>
             </ul>
@@ -661,14 +724,14 @@
     </div>
     <ul class="drawer-links">
       <li><a href="#home" class="drawer-link active">Home</a></li>
-      <li><a href="#apps" class="drawer-link">Apps</a></li>
+      <li><a href="apps.html" class="drawer-link">Apps</a></li>
       <li><a href="articles.html" class="drawer-link">Blog</a></li>
       <li><a href="#categories" class="drawer-link">Categories</a></li>
       <li><a href="#about" class="drawer-link">About</a></li>
       <li><a href="#contact" class="drawer-link">Contact</a></li>
     </ul>
     <div style="margin-top:auto; padding-top:20px; border-top:1px solid #f1f5f9;">
-      <a href="#apps" class="btn-primary" style="width:100%; justify-content:center;">Explore Apps</a>
+      <a href="apps.html" class="btn-primary" style="width:100%; justify-content:center;">Explore All Apps</a>
     </div>
   </aside>
 
